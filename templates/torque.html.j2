@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+
+{%block title%}Torque{%endblock%}
+
+{% block obsah %}
+
+<h2>Canyon Torgue</h2>
+
+<ul style="color:black;", font size="16">
+    <li>Model torque je kolo určené na sjezd. A to ať už v bikeparku nebo na přírodní freeride.</li>
+    <li>Pohon obstaravá 12-ti pastorková sada SRAM</li>
+    <li>Vdilice: Rock Shox Lyric 180mm</li>
+    <li>Tlumič: Rock Shox Super Deluxe+</li>
+</ul>
+
+<p></p>
+<p></p>
+<p></p>
+<img src="{{ url_for('static', filename='torque.png') }}" alt="", width="1200" heigh="675">
+
+<h2>Geometrie rámu</h2>
+<p></p>
+<img src="{{ url_for('static', filename='torquegeo.png') }}" alt="", width="1200" heigh="675">
+
+{% endblock obsah %}
+

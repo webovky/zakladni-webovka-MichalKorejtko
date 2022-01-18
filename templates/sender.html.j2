@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+
+{%block title%}Sender{%endblock%}
+
+{% block obsah %}
+<h2> Canyon Sender</h2>
+<p></p>
+
+<ul style="color:black;", font size="16">
+    <li>Model sender je kolo určené pouze na sjezd. A to ať už v bikeparku nebo na přírodní freeride.</li>
+    <li>Pohon obstaravá 7-mi pastorková sada SRAM</li>
+    <li>Vdilice: Rock Shox 200mm</li>
+    <li>Tlumič: Rock Shox Super Deluxe+</li>
+</ul>
+
+
+<img src="{{ url_for('static', filename='sender.png') }}" alt="", width="1200" heigh="675">
+
+<h2>Geometrie rámu</h2>
+<p></p>
+<img src="{{ url_for('static', filename='sendergeo.png') }}" alt="", width="1200" heigh="675">
+
+{% endblock obsah %}
+

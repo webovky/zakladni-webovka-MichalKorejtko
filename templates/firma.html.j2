@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+
+{%block title%}Firma Canyon{%endblock%}
+
+{% block obsah %}
+<h2> Firma Canyon bicycles</h2>
+
+<img src="{{ url_for('static', filename='canyonlogo.png') }}" alt="" title=" logo firmy">
+
+<ul style="color:black;">
+    <li>Firma Canyon je jedna z halních firem v cyklo průmyslu.</li>
+    <li>Kola jsou vyráběna v německu.</li>
+    <li>Firma má české zastoupení.</li>
+    <li>Vyrabí širokou škálu kol pro různá použití</li>
+</ul>
+
+
+<img src="{{ url_for('static', filename='firmafoto.jpg') }}" alt="", width="1000" heigh="500">
+
+{% endblock obsah %}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}Canyon{%endblock%}</title>
+    
+    <link rel="stylesheet" 
+        href="{{ url_for('static', filename='styles.css')}}">
+
+</head>
+
+<body style="background-color:lightgrey;">
+
+<h1 style="color:black;", font size="40">Canyon bike company</h1>
+<p></p>
+<p></p>
+
+<ul style="color:purple;", font size="20">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('firma') }}">Firma Canyon</a></li>
+    <li><a href="{{ url_for('spectral') }}">Canyon Spectral</a></li>
+    <li><a href="{{ url_for('sender') }}">Canyon Sender</a></li>
+    <li><a href="{{ url_for('torque') }}">Canyon Torque</a></li>
+    <li><a href="{{ url_for('login') }}">Login</a></li>
+</ul>
+
+<p class="login"></p>
+{% if "user" in session %}
+Jsi přihlášen jako <strong>{{session.get("user")}}</strong>.
+<a href="{{url_for("logout") }}">Odhlásit</a>
+
+{% else %}
+Nejsi přihlášen! Měl by jsi to změnit.
+<a href="{{url_for("logout") }}">Přihlásit</a>
+
+{% endif %}
+
+{%for category, message in get_flashed_messages(with_categories=true) %}
+<p class="message {{category}}">{{message}}</p>
+{% endfor %}
+
+
+{% block obsah %}
+
+<p></p>
+
+<p></p>
+
+
+
+{% endblock obsah %} 
+
+</body>
+</html>
+
